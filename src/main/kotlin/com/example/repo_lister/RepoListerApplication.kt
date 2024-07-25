@@ -9,5 +9,5 @@ import org.springframework.cloud.openfeign.EnableFeignClients
 class RepoListerApplication
 
 fun main(args: Array<String>) {
-	runApplication<RepoListerApplication>(*args)
+    runApplication<RepoListerApplication>(*args)
 }

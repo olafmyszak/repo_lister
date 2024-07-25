@@ -1,8 +1,10 @@
 # Repo-lister
 
-Repo-lister is a Spring Boot application providing an API that lists all non-fork GitHub repositories. For each repository it also returns all branches with info about each branch's name and last commit SHA.
+Repo-lister is a Spring Boot application providing an API that lists all non-fork GitHub repositories. For each
+repository it also returns all branches with info about each branch's name and last commit SHA.
 
 ## Installation
+
 1. Clone the repository:
     ```sh
     git clone https://github.com/olafmyszak/repo-lister.git
@@ -14,10 +16,13 @@ Repo-lister is a Spring Boot application providing an API that lists all non-for
     ```
 
 ## Usage
+
 To run the application, use the following command:
+
 ```sh
 ./gradlew bootRun
 ```
+
 The application will start on http://localhost:8080.
 
 ## API Endpoints
@@ -27,10 +32,10 @@ The application will start on http://localhost:8080.
 - **URL**: `/users/{username}/repos`
 - **Method**: GET
 - **Headers**:
-  - `Accept: application/json`
+    - `Accept: application/json`
 - **Response**:
-  - 200 OK: List of non-fork repositories with branch details.
-  - 404 Not Found: User does not exist.
+    - 200 OK: List of non-fork repositories with branch details.
+    - 404 Not Found: User does not exist.
 
 **Example Request**:
 
@@ -82,4 +87,5 @@ Accept: application/json
 ```
 
 ## License
+
 [WTFPL](LICENSE)
