@@ -82,3 +82,4 @@ Accept: application/json
 ```
 
 ## License
+[WTFPL](LICENSE)
