@@ -4,6 +4,7 @@ plugins {
 	kotlin("jvm") version "1.9.24"
 	kotlin("plugin.spring") version "1.9.24"
 }
+val springCloudVersion by extra("2023.0.3")
 
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
@@ -21,6 +22,8 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
@@ -30,6 +33,11 @@ dependencies {
 kotlin {
 	compilerOptions {
 		freeCompilerArgs.addAll("-Xjsr305=strict")
+	}
+}
+dependencyManagement {
+	imports {
+		mavenBom("org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion")
 	}
 }
 
