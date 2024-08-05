@@ -3,11 +3,10 @@ package com.example.repo_lister
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
-@SpringBootTest
-class RepoListerApplicationTests {
+@SpringBootTest()
+class RepoListerApplicationTests() {
 
     @Test
     fun contextLoads() {
     }
-
 }
